@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1090 580" width="100%" height="100%" style="display:block;background:#ffffff;font-family:'Google Sans',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <marker id="arrBlue" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2563EB"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#8B5CF6"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#059669"/>
+    </marker>
+    <marker id="arrRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#DC2626"/>
+    </marker>
+    <marker id="arrYellow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#EAB308"/>
+    </marker>
+  </defs>
+
+  <!-- Outer Canvas Container -->
+  <rect x="8" y="8" width="1074" height="564" rx="16" fill="#F8F9FA" stroke="#E8EAED" stroke-width="1.5"/>
+
+  <!-- ==================== TIER 1: STRATEGY SELECTION ==================== -->
+  <text x="545" y="44" text-anchor="middle" fill="#475569" font-size="12" font-weight="700" letter-spacing="0.8">STRATEGY SELECTION</text>
+
+  <!-- Dashed Strategy Search Box -->
+  <rect x="24" y="54" width="348" height="94" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Explorer Box -->
+  <g transform="translate(36, 64)">
+    <rect width="150" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="150" height="26" rx="6" fill="#3B82F6"/>
+    <rect y="18" width="150" height="8" fill="#3B82F6"/>
+    <text x="75" y="18" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700">🔭 Explorer</text>
+    <text x="75" y="44" text-anchor="middle" fill="#334155" font-size="9">Generate diverse candidate</text>
+    <text x="75" y="58" text-anchor="middle" fill="#334155" font-size="9">strategies in parallel</text>
+  </g>
+
+  <!-- Falsifier Box -->
+  <g transform="translate(208, 64)">
+    <rect width="152" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="152" height="26" rx="6" fill="#EF4444"/>
+    <rect y="18" width="152" height="8" fill="#EF4444"/>
+    <text x="76" y="18" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700">⚔️ Falsifier</text>
+    <text x="76" y="44" text-anchor="middle" fill="#334155" font-size="9.5">Adversarial review</text>
+    <text x="76" y="58" text-anchor="middle" fill="#334155" font-size="9.5">on each strategy</text>
+  </g>
+
+  <!-- Arrow from Strategy Search to Tree Synthesis -->
+  <line x1="380" y1="100" x2="416" y2="100" stroke="#3B82F6" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+
+  <!-- Tree Synthesis Box -->
+  <g transform="translate(424, 64)">
+    <rect width="180" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="180" height="26" rx="6" fill="#8B5CF6"/>
+    <rect y="18" width="180" height="8" fill="#8B5CF6"/>
+    <text x="90" y="18" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700">🏆 Tree Synthesis</text>
+    <text x="90" y="44" text-anchor="middle" fill="#334155" font-size="8.8">Synthesize strategies, repair or</text>
+    <text x="90" y="58" text-anchor="middle" fill="#334155" font-size="8.8">carry open objections</text>
+  </g>
+
+  <!-- Arrow from Tree Synthesis to Gate Review -->
+  <line x1="612" y1="100" x2="646" y2="100" stroke="#8B5CF6" stroke-width="2.5" marker-end="url(#arrPurple)"/>
+
+  <!-- Gate Review Box -->
+  <g transform="translate(654, 64)">
+    <rect width="170" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="170" height="26" rx="6" fill="#F59E0B"/>
+    <rect y="18" width="170" height="8" fill="#F59E0B"/>
+    <text x="85" y="18" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700">🔍 Gate Review</text>
+    <text x="85" y="44" text-anchor="middle" fill="#334155" font-size="9.5">Pass a credible route</text>
+    <text x="85" y="58" text-anchor="middle" fill="#334155" font-size="9.5">or re-explore</text>
+  </g>
+
+  <!-- Direct Connection from Gate Review to Pitfall Registry -->
+  <line x1="824" y1="100" x2="864" y2="100" stroke="#EAB308" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrYellow)"/>
+
+  <!-- Pitfall Registry Box -->
+  <g transform="translate(870, 70)">
+    <rect width="196" height="60" rx="8" fill="#FEFCE8" stroke="#FACC15" stroke-width="1.5" stroke-dasharray="4,3" filter="url(#cardShadow)"/>
+    <text x="98" y="35" text-anchor="middle" fill="#854D0E" font-size="12" font-weight="700">📚 Pitfall Registry</text>
+  </g>
+
+  <!-- Feedback Loop into Pitfall Registry (Top Arc) -->
+  <path d="M 197 60 C 197 12, 968 12, 968 64" fill="none" stroke="#EAB308" stroke-width="1.6" stroke-dasharray="5,4"/>
+
+  <!-- ==================== TIER 2: PROOF CONSTRUCTION ==================== -->
+  <text x="545" y="180" text-anchor="middle" fill="#475569" font-size="13" font-weight="700" letter-spacing="0.8">PROOF CONSTRUCTION</text>
+
+  <!-- Long Route from Gate Review down to Decomposition -->
+  <path d="M 739 136 C 739 175, 170 155, 170 198" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+  <!-- Decomposition Box -->
+  <g transform="translate(90, 204)">
+    <rect width="160" height="84" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="160" height="28" rx="8" fill="#2563EB"/>
+    <rect y="20" width="160" height="8" fill="#2563EB"/>
+    <text x="80" y="19" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="700">🧩 Decomposition</text>
+    <text x="80" y="48" text-anchor="middle" fill="#334155" font-size="9.5">Split proof in sub-problems</text>
+    <text x="80" y="64" text-anchor="middle" fill="#334155" font-size="9.5">with dependence graph</text>
+  </g>
+
+  <!-- Arrow from Decomposition to Sub-problems -->
+  <line x1="256" y1="246" x2="294" y2="246" stroke="#2563EB" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+  <!-- Sub-problem Stack (x=302) -->
+  <g transform="translate(302, 192)">
+    <!-- Sub-problem 1 -->
+    <rect y="0" width="176" height="32" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="88" y="20" text-anchor="middle" fill="#1E40AF" font-size="11" font-weight="600">🔧 Sub-problem 1</text>
+    <!-- Sub-problem 2 -->
+    <rect y="40" width="176" height="32" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="88" y="60" text-anchor="middle" fill="#1E40AF" font-size="11" font-weight="600">🔧 Sub-problem 2</text>
+    <!-- Sub-problem N -->
+    <rect y="80" width="176" height="32" rx="6" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="88" y="100" text-anchor="middle" fill="#1E40AF" font-size="11" font-weight="600">🔧 Sub-problem N</text>
+
+    <text x="88" y="126" text-anchor="middle" fill="#64748B" font-size="9.5">Solved in parallel when dependencies allow</text>
+  </g>
+
+  <!-- Arrow from Sub-problems to Global Verification -->
+  <line x1="484" y1="246" x2="538" y2="246" stroke="#2563EB" stroke-width="2" marker-end="url(#arrBlue)"/>
+  <text x="511" y="238" text-anchor="middle" fill="#475569" font-size="10" font-weight="600">Assemble</text>
+
+  <!-- Global Verification Box -->
+  <g transform="translate(546, 204)">
+    <rect width="180" height="84" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect width="180" height="30" rx="8" fill="#0D9488"/>
+    <rect y="22" width="180" height="8" fill="#0D9488"/>
+    <text x="90" y="20" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">✅ Global Verification</text>
+    <text x="90" y="52" text-anchor="middle" fill="#334155" font-size="10">Checks the</text>
+    <text x="90" y="68" text-anchor="middle" fill="#334155" font-size="10">complete proof</text>
+  </g>
+
+  <!-- Arrow from Global Verification to Outcomes -->
+  <line x1="732" y1="246" x2="774" y2="246" stroke="#0D9488" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+  <!-- Outcome Pills Stack (x=782) -->
+  <g transform="translate(782, 192)">
+    <!-- Accepted -->
+    <rect y="0" width="150" height="32" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="75" y="21" text-anchor="middle" fill="#15803D" font-size="11.5" font-weight="700">✓ Accepted</text>
+    <!-- Revise -->
+    <rect y="40" width="150" height="32" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="75" y="61" text-anchor="middle" fill="#B45309" font-size="11.5" font-weight="700">↻ Revise</text>
+    <!-- Re-explore -->
+    <rect y="80" width="150" height="32" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="75" y="101" text-anchor="middle" fill="#B91C1C" font-size="11.5" font-weight="700">↩ Re-explore</text>
+  </g>
+
+  <!-- Feedback Line from Re-explore to Pitfall Registry -->
+  <path d="M 934 288 C 968 288, 968 140, 968 136" fill="none" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ==================== TIER 3: ACCUMULATED KNOWLEDGE ==================== -->
+  <g transform="translate(24, 370)">
+    <rect width="1042" height="150" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <text x="521" y="32" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="800" letter-spacing="0.8">ACCUMULATED KNOWLEDGE</text>
+
+    <!-- 4 Knowledge Cards -->
+    <!-- Card 1: Prior Attempts -->
+    <g transform="translate(18, 52)">
+      <rect width="238" height="66" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.2"/>
+      <text x="119" y="38" text-anchor="middle" fill="#1D4ED8" font-size="12" font-weight="700">↺ Prior attempts</text>
+    </g>
+
+    <!-- Card 2: Knowledge Directory -->
+    <g transform="translate(274, 52)">
+      <rect width="238" height="66" rx="8" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.2"/>
+      <text x="119" y="38" text-anchor="middle" fill="#15803D" font-size="12" font-weight="700">📚 Knowledge directory</text>
+    </g>
+
+    <!-- Card 3: Pitfalls & Objections -->
+    <g transform="translate(530, 52)">
+      <rect width="238" height="66" rx="8" fill="#FEFCE8" stroke="#CA8A04" stroke-width="1.2"/>
+      <text x="119" y="38" text-anchor="middle" fill="#A16207" font-size="12" font-weight="700">⚠️ Pitfalls &amp; objections</text>
+    </g>
+
+    <!-- Card 4: Computational Evidence -->
+    <g transform="translate(786, 52)">
+      <rect width="238" height="66" rx="8" fill="#FAF5FF" stroke="#9333EA" stroke-width="1.2"/>
+      <text x="119" y="38" text-anchor="middle" fill="#7E22CE" font-size="12" font-weight="700">💻 Computational evidence</text>
+    </g>
+  </g>
+</svg>

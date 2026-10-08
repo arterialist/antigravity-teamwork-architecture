@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%" style="display:block;background:#ffffff;font-family:'Google Sans',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <filter id="pillShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Title & Subtitle -->
+  <text x="600" y="46" text-anchor="middle" fill="#1E40AF" font-size="24" font-weight="800">Cycle Alignment: BOOM vs. Teamwork Simulator</text>
+  <text x="600" y="74" text-anchor="middle" fill="#475569" font-size="14" font-weight="500">Unseen Test Suite (18 Workloads): Mean Absolute Percentage Error (MAPE) = 0.71%</text>
+
+  <!-- Legend (Top Right) -->
+  <g transform="translate(800, 94)">
+    <rect x="0" y="0" width="340" height="32" rx="6" fill="#F8FAFC"/>
+    <!-- BOOM -->
+    <rect x="16" y="8" width="16" height="16" rx="3" fill="#F59E0B"/>
+    <text x="40" y="21" fill="#1E293B" font-size="12" font-weight="700">BOOM (Hardware Ref)</text>
+    <!-- Teamwork -->
+    <rect x="190" y="8" width="16" height="16" rx="3" fill="#10B981"/>
+    <text x="214" y="21" fill="#1E293B" font-size="12" font-weight="700">Teamwork Simulator</text>
+  </g>
+
+  <!-- Grid Lines (Log Scale: 10K, 20K, 50K, 100K, 200K, 500K, 1M) -->
+  <!-- Plot area: Left=100, Right=1140, Bottom=540, Top=140. Height=400 -->
+  <!-- Log mapping:
+       10K  -> y=540 (log10(10)=1)
+       20K  -> y=480 (log10(20)=1.301)
+       50K  -> y=400 (log10(50)=1.699)
+       100K -> y=340 (log10(100)=2)
+       200K -> y=280 (log10(200)=2.301)
+       500K -> y=200 (log10(500)=2.699)
+       1M   -> y=140 (log10(1000)=3)
+  -->
+  <g stroke="#E2E8F0" stroke-width="1">
+    <line x1="100" y1="140" x2="1140" y2="140"/>
+    <line x1="100" y1="200" x2="1140" y2="200"/>
+    <line x1="100" y1="280" x2="1140" y2="280"/>
+    <line x1="100" y1="340" x2="1140" y2="340"/>
+    <line x1="100" y1="400" x2="1140" y2="400"/>
+    <line x1="100" y1="480" x2="1140" y2="480"/>
+    <line x1="100" y1="540" x2="1140" y2="540" stroke="#94A3B8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Y-Axis Labels -->
+  <g text-anchor="end" fill="#475569" font-size="12.5" font-weight="700">
+    <text x="85" y="145">1M</text>
+    <text x="85" y="205">500K</text>
+    <text x="85" y="285">200K</text>
+    <text x="85" y="345">100K</text>
+    <text x="85" y="405">50K</text>
+    <text x="85" y="485">20K</text>
+    <text x="85" y="545">10K</text>
+  </g>
+
+  <!-- ==================== 6 CATEGORIES ==================== -->
+  
+  <!-- 1. Memory Bandwidth (center x=190) -->
+  <!-- Bar heights: ~165K (y=298). Error pill 0.57% at y=274 -->
+  <g>
+    <rect x="156" y="298" width="28" height="242" rx="4" fill="#F59E0B"/>
+    <rect x="188" y="298" width="28" height="242" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="157" y="272" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="186" y="286" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.57%</text>
+    <!-- Label -->
+    <text x="186" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Memory Bandwidth</text>
+    <text x="186" y="590" text-anchor="middle" fill="#64748B" font-size="11">(ML2 BW ldst, ML2 BW st)</text>
+  </g>
+
+  <!-- 2. Store Buffering (center x=360) -->
+  <!-- Bar heights: ~74K (y=368). Error pill 0.60% at y=344 -->
+  <g>
+    <rect x="326" y="368" width="28" height="172" rx="4" fill="#F59E0B"/>
+    <rect x="358" y="368" width="28" height="172" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="327" y="342" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="356" y="356" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.60%</text>
+    <!-- Label -->
+    <text x="356" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Store Buffering</text>
+    <text x="356" y="590" text-anchor="middle" fill="#64748B" font-size="11">(STL2b, STc)</text>
+  </g>
+
+  <!-- 3. Address Gen / LSQ (center x=530) -->
+  <!-- Bar heights: ~54K (y=394). Error pill 0.71% at y=370 -->
+  <g>
+    <rect x="496" y="394" width="28" height="146" rx="4" fill="#F59E0B"/>
+    <rect x="528" y="394" width="28" height="146" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="497" y="368" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="526" y="382" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.71%</text>
+    <!-- Label -->
+    <text x="526" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Address Gen / LSQ</text>
+    <text x="526" y="590" text-anchor="middle" fill="#64748B" font-size="11">(MIM, MD, MCS, CS3)</text>
+  </g>
+
+  <!-- 4. Control Flow (center x=700) -->
+  <!-- Bar heights: ~210K (y=274). Error pill 0.72% at y=250 -->
+  <g>
+    <rect x="666" y="274" width="28" height="266" rx="4" fill="#F59E0B"/>
+    <rect x="698" y="274" width="28" height="266" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="667" y="248" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="696" y="262" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.72%</text>
+    <!-- Label -->
+    <text x="696" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Control Flow</text>
+    <text x="696" y="590" text-anchor="middle" fill="#64748B" font-size="11">(ST pipe1, ST pipe2, ST pipe3)</text>
+  </g>
+
+  <!-- 5. Cache Hierarchy (center x=870) -->
+  <!-- Bar heights: ~440K (y=210). Error pill 0.73% at y=186 -->
+  <g>
+    <rect x="836" y="210" width="28" height="330" rx="4" fill="#F59E0B"/>
+    <rect x="868" y="210" width="28" height="330" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="837" y="184" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="866" y="198" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.73%</text>
+    <!-- Label -->
+    <text x="866" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Cache Hierarchy</text>
+    <text x="866" y="590" text-anchor="middle" fill="#64748B" font-size="11">(CCh, CCh st, ML2)</text>
+  </g>
+
+  <!-- 6. Floating-Point (center x=1040) -->
+  <!-- Bar heights: ~18K (y=490). Error pill 0.81% at y=466 -->
+  <g>
+    <rect x="1006" y="490" width="28" height="50" rx="4" fill="#F59E0B"/>
+    <rect x="1038" y="490" width="28" height="50" rx="4" fill="#10B981"/>
+    <!-- Pill -->
+    <rect x="1007" y="464" width="58" height="20" rx="10" fill="#DCFCE7"/>
+    <text x="1036" y="478" text-anchor="middle" fill="#15803D" font-size="11" font-weight="700">0.81%</text>
+    <!-- Label -->
+    <text x="1036" y="570" text-anchor="middle" fill="#0F172A" font-size="13.5" font-weight="700">Floating-Point</text>
+    <text x="1036" y="590" text-anchor="middle" fill="#64748B" font-size="11">(EF, DP1f, DPTd, DPcvt)</text>
+  </g>
+
+  <!-- X-Axis Title -->
+  <text x="600" y="640" text-anchor="middle" fill="#0F172A" font-size="15" font-weight="800">Wisconsin Microbenchmark Categories</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 210" width="100%" height="100%" style="display:block;background:#ffffff;font-family:'Google Sans',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Card 1: 100% -->
+    <g transform="translate(10, 0)">
+      <rect width="288" height="186" rx="14" fill="#F8F9FA" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <text x="144" y="60" text-anchor="middle" fill="#16A34A" font-size="36" font-weight="800">100%</text>
+      <text x="144" y="104" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">Microarchitectural functional</text>
+      <text x="144" y="126" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">correctness in lockstep</text>
+      <text x="144" y="148" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">co-simulation against Spike</text>
+    </g>
+
+    <!-- Card 2: 100+ -->
+    <g transform="translate(324, 0)">
+      <rect width="288" height="186" rx="14" fill="#F8F9FA" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <text x="144" y="60" text-anchor="middle" fill="#2563EB" font-size="36" font-weight="800">100+</text>
+      <text x="144" y="104" text-anchor="middle" fill="#334155" font-size="12" font-weight="500">RISC-V test suites validated</text>
+      <text x="144" y="126" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="500">(rv64ui/um/si/mi, Dhrystone,</text>
+      <text x="144" y="148" text-anchor="middle" fill="#334155" font-size="11.5" font-weight="500">CoreMark)</text>
+    </g>
+
+    <!-- Card 3: Linux -->
+    <g transform="translate(638, 0)">
+      <rect width="288" height="186" rx="14" fill="#F8F9FA" stroke="#1E293B" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <text x="144" y="60" text-anchor="middle" fill="#16A34A" font-size="36" font-weight="800">Linux</text>
+      <text x="144" y="104" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">Boots xv6 and Linux kernel to</text>
+      <text x="144" y="126" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">shell on the AI-designed CPU</text>
+      <text x="144" y="148" text-anchor="middle" fill="#334155" font-size="12.5" font-weight="500">simulator</text>
+    </g>
+  </g>
+</svg>

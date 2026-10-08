@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" width="100%" height="100%" style="display:block;background:#ffffff;font-family:'Google Sans',system-ui,-apple-system,sans-serif;">
+  <defs>
+    <!-- Drop Shadow Filters -->
+    <filter id="cardShadow" x="-3%" y="-4%" width="106%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+    <filter id="pillShadow" x="-5%" y="-10%" width="110%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Canvas Container -->
+  <rect x="8" y="8" width="1184" height="354" rx="20" fill="#F8F9FA" stroke="#E8EAED" stroke-width="1.5"/>
+
+  <!-- ======================================================================= -->
+  <!-- ROW 1                                                                   -->
+  <!-- ======================================================================= -->
+
+  <!-- CELL (1,1): Header Block -->
+  <g transform="translate(24, 24)">
+    <rect width="368" height="148" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#cardShadow)"/>
+    <rect x="24" y="22" width="192" height="20" rx="10" fill="#F1F5F9"/>
+    <text x="120" y="36" text-anchor="middle" fill="#475569" font-size="10" font-weight="700" letter-spacing="0.8">FRAMEWORK ARCHITECTURE</text>
+    
+    <text x="24" y="70" fill="#1E293B" font-size="19" font-weight="700" letter-spacing="-0.3">The Teamwork framework</text>
+    <text x="24" y="96" fill="#1E293B" font-size="19" font-weight="700" letter-spacing="-0.3">applies across many domains</text>
+    <text x="24" y="126" fill="#64748B" font-size="11.5" font-weight="500">Autonomous multi-agent orchestration</text>
+  </g>
+
+  <!-- CELL (1,2): Iterative Coding -->
+  <g transform="translate(416, 24)">
+    <rect width="368" height="148" rx="14" fill="#FAF5FF" stroke="#DDD6FE" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <circle cx="28" cy="28" r="7" fill="#8B5CF6"/>
+    <text x="44" y="33" fill="#1E293B" font-size="15" font-weight="700">Iterative Coding</text>
+    <text x="28" y="52" fill="#6B7280" font-size="11.5">Non-decomposable problems</text>
+    <line x1="28" y1="62" x2="340" y2="62" stroke="#EDE9FE" stroke-width="1"/>
+
+    <!-- Pills (y=88, h=28, cy=102) centered in card (w=368) -->
+    <!-- Pill 1: Implement (x=35..111) -->
+    <rect x="35" y="88" width="76" height="28" rx="14" fill="#8B5CF6" filter="url(#pillShadow)"/>
+    <text x="73" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Implement</text>
+    
+    <!-- Arrow 1 (117..140) -->
+    <line x1="117" y1="102" x2="135" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="134,98.5 140,102 134,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 2: Refine (x=146..222) -->
+    <rect x="146" y="88" width="76" height="28" rx="14" fill="#2563EB" filter="url(#pillShadow)"/>
+    <text x="184" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Refine</text>
+    
+    <!-- Arrow 2 (228..251) -->
+    <line x1="228" y1="102" x2="246" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="245,98.5 251,102 245,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 3: Refine (x=257..333) -->
+    <rect x="257" y="88" width="76" height="28" rx="14" fill="#2563EB" filter="url(#pillShadow)"/>
+    <text x="295" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Refine</text>
+  </g>
+
+  <!-- CELL (1,3): Distributed Coding -->
+  <g transform="translate(808, 24)">
+    <rect width="368" height="148" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <circle cx="28" cy="28" r="7" fill="#2563EB"/>
+    <text x="44" y="33" fill="#1E293B" font-size="15" font-weight="700">Distributed Coding</text>
+    <text x="28" y="52" fill="#6B7280" font-size="11.5">Decomposable software engineering tasks</text>
+    <line x1="28" y1="62" x2="340" y2="62" stroke="#DBEAFE" stroke-width="1"/>
+
+    <!-- Pills (y=88, h=28, cy=102) -->
+    <!-- Pill 1: Explore (x=18..76) -->
+    <rect x="18" y="88" width="58" height="28" rx="14" fill="#059669" filter="url(#pillShadow)"/>
+    <text x="47" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Explore</text>
+    
+    <!-- Arrow 1 (82..96) -->
+    <line x1="82" y1="102" x2="95" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="94,98.5 100,102 94,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 2: Implement (stacked 3 layers) (x=106..182) -->
+    <g transform="translate(106, 84)">
+      <rect x="4" y="0" width="76" height="28" rx="14" fill="#1E40AF" opacity="0.25"/>
+      <rect x="2" y="2" width="76" height="28" rx="14" fill="#1E40AF" opacity="0.5"/>
+      <rect x="0" y="4" width="76" height="28" rx="14" fill="#2563EB" filter="url(#pillShadow)"/>
+      <text x="38" y="22" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Implement</text>
+    </g>
+    
+    <!-- Arrow 2 (188..202) -->
+    <line x1="188" y1="102" x2="201" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="200,98.5 206,102 200,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 3: Critic (x=212..268) -->
+    <rect x="212" y="88" width="56" height="28" rx="14" fill="#F59E0B" filter="url(#pillShadow)"/>
+    <text x="240" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Critic</text>
+    
+    <!-- Arrow 3 (274..288) -->
+    <line x1="274" y1="102" x2="287" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="286,98.5 292,102 286,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 4: Verify (x=298..354) -->
+    <rect x="298" y="88" width="56" height="28" rx="14" fill="#0D9488" filter="url(#pillShadow)"/>
+    <text x="326" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Verify</text>
+  </g>
+
+  <!-- ======================================================================= -->
+  <!-- ROW 2                                                                   -->
+  <!-- ======================================================================= -->
+
+  <!-- CELL (2,1): Long Proof -->
+  <g transform="translate(24, 196)">
+    <rect width="368" height="148" rx="14" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <circle cx="28" cy="28" r="7" fill="#F59E0B"/>
+    <text x="44" y="33" fill="#1E293B" font-size="15" font-weight="700">Long Proof</text>
+    <text x="28" y="52" fill="#6B7280" font-size="11.5">Open math &amp; science problems</text>
+    <line x1="28" y1="62" x2="340" y2="62" stroke="#FEF3C7" stroke-width="1"/>
+
+    <!-- Pills (y=88, h=28, cy=102) -->
+    <!-- Pill 1: Explore (x=16..72) -->
+    <rect x="16" y="88" width="56" height="28" rx="14" fill="#F59E0B" filter="url(#pillShadow)"/>
+    <text x="44" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Explore</text>
+    
+    <!-- Arrow 1 (77..90) -->
+    <line x1="77" y1="102" x2="89" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="88,98.5 94,102 88,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 2: Falsify (x=99..155) -->
+    <rect x="99" y="88" width="56" height="28" rx="14" fill="#EF4444" filter="url(#pillShadow)"/>
+    <text x="127" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Falsify</text>
+    
+    <!-- Arrow 2 (160..173) -->
+    <line x1="160" y1="102" x2="172" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="171,98.5 177,102 171,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 3: Solve (x=182..234) -->
+    <rect x="182" y="88" width="52" height="28" rx="14" fill="#2563EB" filter="url(#pillShadow)"/>
+    <text x="208" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Solve</text>
+    
+    <!-- Arrow 3 (239..252) -->
+    <line x1="239" y1="102" x2="251" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="250,98.5 256,102 250,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 4: Verify (x=261..315) -->
+    <rect x="261" y="88" width="54" height="28" rx="14" fill="#0D9488" filter="url(#pillShadow)"/>
+    <text x="288" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Verify</text>
+    
+    <!-- Checkmark Badge (x=338) -->
+    <circle cx="338" cy="102" r="11" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
+    <text x="338" y="107" text-anchor="middle" fill="#059669" font-size="13" font-weight="800">✓</text>
+  </g>
+
+  <!-- CELL (2,2): Self-Verification -->
+  <g transform="translate(416, 196)">
+    <rect width="368" height="148" rx="14" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <circle cx="28" cy="28" r="7" fill="#059669"/>
+    <text x="44" y="33" fill="#1E293B" font-size="15" font-weight="700">Self-Verification</text>
+    <text x="28" y="52" fill="#6B7280" font-size="11.5">Deep reasoning with rigorous self-verification</text>
+    <line x1="28" y1="62" x2="340" y2="62" stroke="#D1FAE5" stroke-width="1"/>
+
+    <!-- Top Loop Arch -->
+    <path d="M 284,88 C 314,88 314,70 270,70 L 82,70 C 68,70 68,80 68,83" fill="none" stroke="#059669" stroke-width="1.6" stroke-dasharray="4,3"/>
+    <polygon points="64.5,82 71.5,82 68,88" fill="#059669"/>
+    <text x="318" y="86" fill="#059669" font-size="10.5" font-weight="700">loop</text>
+
+    <!-- Pills (y=88, h=28, cy=102) -->
+    <!-- Pill 1: Generate (x=32..104) -->
+    <rect x="32" y="88" width="72" height="28" rx="14" fill="#059669" filter="url(#pillShadow)"/>
+    <text x="68" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Generate</text>
+    
+    <!-- Arrow 1 (110..128) -->
+    <line x1="110" y1="102" x2="127" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="126,98.5 132,102 126,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 2: Verify (x=138..198) -->
+    <rect x="138" y="88" width="60" height="28" rx="14" fill="#0D9488" filter="url(#pillShadow)"/>
+    <text x="168" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Verify</text>
+    
+    <!-- Arrow 2 (204..222) -->
+    <line x1="204" y1="102" x2="221" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="220,98.5 226,102 220,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 3: Revise (x=232..298) -->
+    <rect x="232" y="88" width="66" height="28" rx="14" fill="#EF4444" filter="url(#pillShadow)"/>
+    <text x="265" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11.5" font-weight="600">Revise</text>
+  </g>
+
+  <!-- CELL (2,3): Document Review -->
+  <g transform="translate(808, 196)">
+    <rect width="368" height="148" rx="14" fill="#FFF1F2" stroke="#FECDD3" stroke-width="1.5" filter="url(#cardShadow)"/>
+    <circle cx="28" cy="28" r="7" fill="#EF4444"/>
+    <text x="44" y="33" fill="#1E293B" font-size="15" font-weight="700">Document Review</text>
+    <text x="28" y="52" fill="#6B7280" font-size="11.5">Paper &amp; document analysis</text>
+    <line x1="28" y1="62" x2="340" y2="62" stroke="#FFE4E6" stroke-width="1"/>
+
+    <!-- Pills (y=88, h=28, cy=102) -->
+    <!-- Pill 1: Segment (x=16..76) -->
+    <rect x="16" y="88" width="60" height="28" rx="14" fill="#059669" filter="url(#pillShadow)"/>
+    <text x="46" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Segment</text>
+    
+    <!-- Arrow 1 (82..96) -->
+    <line x1="82" y1="102" x2="95" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="94,98.5 100,102 94,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 2: Review (stacked 3 layers) (x=104..174) -->
+    <g transform="translate(104, 84)">
+      <rect x="4" y="0" width="70" height="28" rx="14" fill="#1E40AF" opacity="0.25"/>
+      <rect x="2" y="2" width="70" height="28" rx="14" fill="#1E40AF" opacity="0.5"/>
+      <rect x="0" y="4" width="70" height="28" rx="14" fill="#2563EB" filter="url(#pillShadow)"/>
+      <text x="35" y="22" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Review</text>
+    </g>
+    
+    <!-- Arrow 2 (180..194) -->
+    <line x1="180" y1="102" x2="193" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="192,98.5 198,102 192,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 3: Synthesis (x=202..272) -->
+    <rect x="202" y="88" width="70" height="28" rx="14" fill="#F59E0B" filter="url(#pillShadow)"/>
+    <text x="237" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Synthesis</text>
+    
+    <!-- Arrow 3 (278..292) -->
+    <line x1="278" y1="102" x2="291" y2="102" stroke="#94A3B8" stroke-width="1.8"/>
+    <polygon points="290,98.5 296,102 290,105.5" fill="#94A3B8"/>
+    
+    <!-- Pill 4: Verify (x=300..354) -->
+    <rect x="300" y="88" width="54" height="28" rx="14" fill="#0D9488" filter="url(#pillShadow)"/>
+    <text x="327" y="106" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="600">Verify</text>
+  </g>
+</svg>
