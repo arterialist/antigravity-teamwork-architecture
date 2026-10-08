@@ -95,4 +95,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 5. ScrollSpy for Navigation Links
+  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+  const navSections = [];
+  navLinks.forEach(link => {
+    const targetId = link.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      const el = document.querySelector(targetId);
+      if (el) {
+        navSections.push({ el, link });
+      }
+    }
+  });
+
+  if (navSections.length > 0) {
+    const onScroll = () => {
+      const scrollPos = window.scrollY + 120;
+      let activeItem = navSections[0];
+      for (let i = 0; i < navSections.length; i++) {
+        if (navSections[i].el.getBoundingClientRect().top + window.scrollY <= scrollPos) {
+          activeItem = navSections[i];
+        }
+      }
+      navLinks.forEach(l => l.classList.remove('active'));
+      if (activeItem) {
+        activeItem.link.classList.add('active');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 });

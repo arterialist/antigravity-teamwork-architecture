@@ -1,14 +1,15 @@
-# Google Antigravity Teamwork Architecture & Implementation
+# Google Antigravity Teamwork: Multi-Agent Swarm Architecture
 
 > The definitive technical breakdown and reverse-engineering of Google Antigravity's autonomous multi-agent swarm framework.
 
-Published live as a GitHub Pages site: **[https://arterialist.github.io/antigravity-teamwork-architecture/](https://arterialist.github.io/antigravity-teamwork-architecture/)**
+Published live on GitHub Pages: **[https://arterialist.github.io/antigravity-teamwork-architecture/](https://arterialist.github.io/antigravity-teamwork-architecture/)**
 
-Formatted to fully replicate the design language and visual aesthetic of the official [Google Antigravity Blog](https://antigravity.google/blog/teamwork-when-ai-becomes-a-research-partner/).
+Author: **arterialist**  
+Design: **Google Brand & Typography Guidelines** (Google Sans Flex, Google Sans Code, Material Design surface containers, Google 4-color palette)
 
 ---
 
-## Highlights Covered
+## Technical Highlights
 
 1. **The "Decoy Rule" Discovery**: Reverse-engineered extraction of the `SYSTEM PROMPT PROTECTION` policy embedded within Antigravity's native `language_server` binary that causes agents to deflect prompt-injection queries with:
    > *"I'm a Teamwork agent. What task can I help you with?"*
@@ -34,15 +35,15 @@ Formatted to fully replicate the design language and visual aesthetic of the off
 
 ```
 antigravity-teamwork-architecture/
-├── index.html                   # Static HTML publication replicating the Google Blog aesthetic
+├── index.html                   # Interactive research publication adhering to Google Brand Guidelines
 ├── README.md                    # Repository documentation
 ├── assets/
 │   ├── css/
-│   │   └── style.css            # Exact Google Blog styles & responsive design tokens
+│   │   └── style.css            # Google brand tokens, typography, and responsive styles
 │   ├── js/
-│   │   └── main.js              # Client script (reading bar, code copy, share dropdown, Mermaid.js)
+│   │   └── main.js              # Reading bar, code copy, share dropdown, scrollspy, Mermaid.js
 │   └── images/
-│       ├── antigravity-logo.png
+│       ├── favicon.svg          # Google 4-color dots SVG favicon
 │       ├── teamwork-wide.jpg
 │       ├── teamwork-patterns-grid.svg
 │       ├── teamwork-distributed-coding-flow.svg
@@ -56,4 +57,4 @@ antigravity-teamwork-architecture/
 
 ## License
 
-MIT © arterialist
+MIT © [arterialist](https://github.com/arterialist)
